@@ -125,6 +125,8 @@ function evaluate({currentOperand,previousOperand,operation})
     case "÷":
       computation=prev/curr
       break;
+      default:
+        break
   
   }
   return computation.toString()

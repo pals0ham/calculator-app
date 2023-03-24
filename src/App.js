@@ -22,11 +22,11 @@ function reducer(state,{type,payload}){
           ovewrite:false,
         }
       }
-      if(payload.digit=='0' && state.currentOperand==='0')
+      if(payload.digit==='0' && state.currentOperand==='0')
       {
         return state
       }
-      if(payload.digit=='.' && state.currentOperand.includes("."))
+      if(payload.digit==='.' && state.currentOperand.includes("."))
       {
         return state
       }
@@ -101,6 +101,8 @@ function reducer(state,{type,payload}){
         ...state,
         currentOperand:state.currentOperand.slice(0, -1)
       }
+      default:
+        break
   }
 }
 function evaluate({currentOperand,previousOperand,operation})
